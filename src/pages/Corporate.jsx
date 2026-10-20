@@ -17,7 +17,7 @@ const OFFERS = [
 
 const STEPS = [
   ['Diagnose', 'A short call and a recorded baseline of how your people present today.'],
-  ['Design', 'A program built around your real meetings, decks and audiences — not generic theory.'],
+  ['Design', 'A program built around your real meetings, decks and audiences, not generic theory.'],
   ['Deliver', 'Playful, high-repetition practice with on-camera feedback and coach notes.'],
   ['Measure', 'Before/after scoring and a debrief report for HR and leadership.'],
 ]
@@ -25,7 +25,6 @@ const STEPS = [
 export default function Corporate() {
   return (
     <Page title="Corporate training">
-      {/* ---------------- Hero */}
       <section className="kn t-dark co-hero">
         <div className="container kn__grid">
           <div className="kn__copy">
@@ -37,7 +36,7 @@ export default function Corporate() {
               {['Boardrooms', 'are just', <span key="b" className="italic amber">bigger classrooms.</span>]}
             </SplitText>
             <Reveal as="p" className="kn__lede" delay={1}>
-              The playful, high-repetition method that built 12,000 confident students — rebuilt for leaders, sales teams and everyone who presents for a living.
+              The playful, high-repetition method that built 12,000 confident students, rebuilt for leaders, sales teams and everyone who presents for a living.
             </Reveal>
             <Reveal className="kn__stats" delay={1.05}>
               <div><strong>+38%</strong><span>avg. presentation score</span></div>
@@ -53,9 +52,8 @@ export default function Corporate() {
         </div>
       </section>
 
-      <Marquee className="corp-logos t-ink" items={['Northwind', 'Lumen Bank', 'Arcadia Health', 'Kitekraft', 'Polaris Labs', 'Saffron Retail', 'Helix Capital']} speed={44} />
+      <Marquee className="corp-logos t-ink" items={['Vardhan Finserv', 'Kestrel Bank', 'Medisense', 'Brightloop', 'Quanta Labs', 'Tarang Retail', 'Indus Capital']} speed={44} />
 
-      {/* ---------------- Offers */}
       <section className="co-off t-paper" id="offers">
         <div className="container">
           <div className="pp-sec-head">
@@ -86,7 +84,6 @@ export default function Corporate() {
         </div>
       </section>
 
-      {/* ---------------- Process */}
       <section className="pp-how t-dark">
         <div className="container">
           <div className="pp-sec-head">
@@ -111,7 +108,6 @@ export default function Corporate() {
         </div>
       </section>
 
-      {/* ---------------- Quote */}
       <section className="co-quote t-amber">
         <div className="container co-quote__in">
           <span className="co-quote__mark" aria-hidden>“</span>
@@ -153,7 +149,7 @@ function CorpForm() {
             </ul>
             <div className="eq__coach">
               <span className="eq__av">R</span>
-              <p>“Tell me about your team — I’ll design the session myself.”<em>Rohan Kapoor · Lead, corporate training</em></p>
+              <p>“Tell me about your team and I’ll design the session myself.”<em>Rohan Kapoor · Lead, corporate training</em></p>
             </div>
           </div>
           <div className="eq__card">
@@ -162,7 +158,7 @@ function CorpForm() {
                 <motion.div key="ok" className="eq__ok" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, ease: EASE }}>
                   <span className="eq__ok-mascot"><Mascot animated ink="#000" band="#fbb03b" /></span>
                   <h3>Proposal incoming.</h3>
-                  <p>Thanks {f.name.split(' ')[0]} — we’ll be in touch at <strong>{f.email}</strong> within 48 hours.</p>
+                  <p>Thanks {f.name.split(' ')[0]}, we’ll be in touch at <strong>{f.email}</strong> within 48 hours.</p>
                 </motion.div>
               ) : (
                 <motion.form

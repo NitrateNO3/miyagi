@@ -195,14 +195,13 @@ function Enquire({ program }) {
     <section className="eq t-dark" id="enquire">
       <div className="container">
         <div className="eq__wrap">
-          {/* Left panel */}
           <div className="eq__side">
             <div className="eq__eyebrow"><span className="num">(03)</span> Enquire</div>
             <SplitText as="h2" className="eq__title">{['Start with a', <span key="a" className="italic">free trial.</span>]}</SplitText>
             <p className="eq__lede">30 minutes with a coach to find the right starting belt for {program.title.toLowerCase()}. No payment, no pressure.</p>
             <ul className="eq__promise">
               <li><Star /> Free, no card needed</li>
-              <li><Star /> Small batches — {program.batch}</li>
+              <li><Star /> Small batches of {program.batch.replace(' per batch', '')}</li>
               <li><Star /> Certificate & showcase at the end</li>
             </ul>
             <div className="eq__coach">
@@ -215,7 +214,6 @@ function Enquire({ program }) {
             </div>
           </div>
 
-          {/* Form card */}
           <div className="eq__card">
             <AnimatePresence mode="wait">
               {sent ? (

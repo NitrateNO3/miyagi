@@ -1,8 +1,4 @@
-/* ==========================================================================
-   HOME HERO
-   Perf rule: only transform / opacity animate continuously. No blend modes,
-   no blur filters, no full-screen masks.
-   ========================================================================== */
+/* Home hero */
 .hh {
   position: relative;
   min-height: 100vh;
@@ -34,7 +30,7 @@
   padding-block: clamp(20px, 4vh, 50px);
 }
 
-/* ---------- Copy ---------- */
+/* Copy */
 .hh__copy { display: flex; flex-direction: column; align-items: flex-start; will-change: transform; }
 .hh__title {
   margin: clamp(22px, 3.4vh, 40px) 0 clamp(22px, 3.4vh, 36px);
@@ -101,7 +97,7 @@
 .hh__proof-text span { color: rgba(255, 255, 255, 0.6); }
 .hh__proof-text b { color: var(--amber); letter-spacing: 0.05em; font-weight: 400; }
 
-/* ---------- Visual ---------- */
+/* Visual */
 .hh__visual {
   position: relative;
   height: min(72vh, 640px);
@@ -208,7 +204,7 @@
 .hh__chip--mascot .hh__float { animation-delay: -4s; }
 .hh__chip--mascot .hh__chip-in { width: 74px; height: 74px; padding: 13px 16px 11px; border-radius: 22px; background: var(--amber); }
 
-/* ---------- Foot ---------- */
+/* Foot */
 .hh__foot {
   position: relative;
   display: flex;
@@ -238,7 +234,7 @@
 .hh__next-title svg { width: 14px; color: var(--amber); transition: transform 0.4s var(--ease); }
 .hh__next:hover .hh__next-title svg { transform: rotate(45deg); }
 
-/* ---------- Tablet / mobile ---------- */
+/* Tablet / mobile */
 @media (max-width: 960px) {
   .hh__inner { grid-template-columns: 1fr; gap: 44px; }
   .hh__title { font-size: clamp(3.4rem, 15vw, 6.4rem); }

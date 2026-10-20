@@ -32,7 +32,6 @@ export default function Home() {
   )
 }
 
-/* ---------------------------------------------------------------- Beliefs */
 const BELIEFS = [
   ['“She’s just shy.”', 'She hasn’t been heard yet.'],
   ['“Some kids are natural speakers.”', 'Every speaker is built, rep by rep.'],
@@ -57,7 +56,7 @@ function Beliefs() {
         <motion.div className="bl__ghost" style={{ y: ghostY }}>
           <div className="bl__ghost-track">
             {Array.from({ length: 4 }).map((_, k) => (
-              <span key={k}>Practice ✦ Repeat ✦&nbsp;</span>
+              <span key={k}>Practice · Repeat ·&nbsp;</span>
             ))}
           </div>
         </motion.div>
@@ -128,10 +127,9 @@ function Beliefs() {
   )
 }
 
-/* ---------------------------------------------------------------- Audiences */
 const AUD = [
   { key: 'schools', label: 'Schools', unit: 'Grades', range: '3–12', blurb: 'In-timetable curriculum, speaking clubs and inter-school leagues, run inside your campus.', to: '/programs?for=schools', theme: 'amber' },
-  { key: 'colleges', label: 'Colleges', unit: 'Ages', range: '18–24', blurb: 'Placement prep, MUN, debate societies and campus leadership — workshops or full semesters.', to: '/programs?for=colleges', theme: 'white' },
+  { key: 'colleges', label: 'Colleges', unit: 'Ages', range: '18–24', blurb: 'Placement prep, MUN, debate societies and campus leadership. Workshops or full semesters.', to: '/programs?for=colleges', theme: 'white' },
   { key: 'individuals', label: 'Individuals', unit: 'Ages', range: '7–70', blurb: 'Small weekend and online batches for kids, students and adults who want to speak up.', to: '/programs?for=individuals', theme: 'paper' },
   { key: 'teams', label: 'Teams', unit: 'Team size', range: '5–500', blurb: 'Executive presence, pitching and leadership communication for companies.', to: '/corporate', theme: 'ink', programs: ['Executive Presence', 'Pitching', 'Storytelling with Data', 'Offsites'] },
 ]
@@ -190,7 +188,6 @@ function Audiences() {
   )
 }
 
-/* ---------------------------------------------------------------- Programs showcase */
 const AUTOPLAY = 4600
 const audLabel = (p) => p.audiences.map((a) => a[0].toUpperCase() + a.slice(1)).join(' · ')
 const pad = (n) => String(n).padStart(2, '0')
@@ -213,7 +210,6 @@ function ProgramsShowcase() {
     return () => clearTimeout(t)
   }, [active, auto]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // subtle 3D tilt on the preview card
   const rx = useMotionValue(0)
   const ry = useMotionValue(0)
   const srx = useSpring(rx, { stiffness: 120, damping: 16 })
@@ -394,14 +390,13 @@ function MobilePrograms() {
   )
 }
 
-/* ---------------------------------------------------------------- Method (belts) */
 function Method() {
   const [active, setActive] = useState(2)
   return (
     <section className="method t-paper">
       <div className="container method__grid">
         <SectionHead index="04" eyebrow="The Miyagi Method" title={['Wax on.', <span key="w" className="italic">Wax off.</span>]}>
-          Like any martial art, confidence is earned one belt at a time. Every Miyagi student progresses through five stages — each with its own skills, challenges and showcase.
+          Like any martial art, confidence is earned one belt at a time. Every Miyagi student progresses through five stages, each with its own skills, challenges and showcase.
         </SectionHead>
         <motion.div className="belts" initial="hidden" whileInView="show" viewport={{ once: true, margin: '0px 0px -15% 0px' }}>
           {belts.map((b, i) => (
@@ -444,7 +439,6 @@ function Method() {
   )
 }
 
-/* ---------------------------------------------------------------- Stats */
 function Stats() {
   return (
     <section className="stats t-amber">
@@ -462,7 +456,6 @@ function Stats() {
   )
 }
 
-/* ---------------------------------------------------------------- Events */
 function OnStage() {
   const { upcoming, seatsLeft } = useStore()
   const list = upcoming.slice(0, 4)
@@ -494,7 +487,6 @@ function OnStage() {
         </div>
 
         <div className="os__grid" onMouseEnter={() => setAuto(false)}>
-          {/* Featured ticket */}
           <Link to={`/events/${e.id}`} className="tk" data-cursor="Book">
             <div className="tk__stub">
               <AnimatePresence mode="popLayout" initial={false}>
@@ -536,7 +528,6 @@ function OnStage() {
             </div>
           </Link>
 
-          {/* Departure board */}
           <div className="board">
             <div className="board__head">
               <span className="label">Also coming up</span>
@@ -575,7 +566,6 @@ function OnStage() {
   )
 }
 
-/* Split-flap countdown: each digit flips when it changes. */
 export function FlipCountdown({ target }) {
   const [now, setNow] = useState(Date.now())
   useEffect(() => {
@@ -617,7 +607,6 @@ export function FlipCountdown({ target }) {
   )
 }
 
-/* ---------------------------------------------------------------- Testimonials — voice notes */
 const WORD_MS = 300
 const TONES = ['#fbb03b', '#fde3b0', '#e0731a', '#ffffff']
 const waveBars = (seed, n) =>
@@ -677,7 +666,6 @@ function Voices() {
         </div>
 
         <div className="vn__grid">
-          {/* Player */}
           <div className="vn__player">
             <div className="vn__who">
               <span className="vn__avatar" style={{ background: TONES[i % TONES.length] }}>{t.name[0]}</span>
@@ -717,7 +705,6 @@ function Voices() {
             </AnimatePresence>
           </div>
 
-          {/* Playlist */}
           <div className="vn__list">
             {testimonials.map((q, k) => {
               const mini = waveBars(k + 1, 34)
@@ -752,7 +739,6 @@ function Voices() {
   )
 }
 
-/* ---------------------------------------------------------------- Corporate — live keynote */
 const SLIDE_MS = 4800
 const SLIDES = [
   {
@@ -878,7 +864,7 @@ export function KeynoteDeck() {
         <div className="kn__screen" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
           <div className="kn__bar">
             <span className="kn__dots"><i /><i /><i /></span>
-            <span>Miyagi × Your Team — Workshop deck</span>
+            <span>Miyagi × Your Team · Workshop deck</span>
             <span className="kn__rec"><i /> Live</span>
           </div>
           <div className="kn__slides">
@@ -941,7 +927,7 @@ function CorporateBand() {
           </div>
           <SplitText className="kn__title">{['Boardrooms are just', <span key="b" className="italic amber">bigger classrooms.</span>]}</SplitText>
           <Reveal as="p" className="kn__lede" delay={0.15}>
-            The playful, high-repetition method that built 12,000 confident students — rebuilt for leaders, sales teams and everyone who presents for a living.
+            The playful, high-repetition method that built 12,000 confident students, rebuilt for leaders, sales teams and everyone who presents for a living.
           </Reveal>
           <Reveal className="kn__stats" delay={0.25}>
             <div><strong>+38%</strong><span>avg. presentation score</span></div>
@@ -950,7 +936,7 @@ function CorporateBand() {
           </Reveal>
           <Reveal className="kn__trust" delay={0.3}>
             <span className="label mute">Trusted by teams at</span>
-            <span className="kn__logos">Northwind · Lumen Bank · Polaris Labs · Helix Capital</span>
+            <span className="kn__logos">Vardhan Finserv · Kestrel Bank · Quanta Labs · Indus Capital</span>
           </Reveal>
           <Reveal className="kn__ctas" delay={0.35}>
             <Btn to="/corporate" variant="amber">Corporate training</Btn>
@@ -964,7 +950,6 @@ function CorporateBand() {
   )
 }
 
-/* ---------------------------------------------------------------- Journal */
 function JournalTeaser() {
   const { publishedPosts } = useStore()
   const [feat, ...rest] = publishedPosts

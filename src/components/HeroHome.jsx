@@ -5,11 +5,6 @@ import { Arrow, Btn, EASE, Mascot } from './ui'
 import { fmtDate, useStore } from '../store/Store'
 import { introDelay } from '../hooks/useMedia'
 
-/*
-  Home hero. Everything animates with transform / opacity only (plus one-off
-  clip-path reveals), so it stays smooth on low-end phones.
-*/
-
 const WORDS = ['voice.', 'courage.', 'words.', 'stage.', 'spark.']
 const WIPE = (delay, dur = 1.1) => ({
   initial: { clipPath: 'inset(0% 100% 0% 0%)', x: -24 },
@@ -23,7 +18,6 @@ export default function HeroHome() {
   const { upcoming } = useStore()
   const next = upcoming[0]
 
-  // gentle mouse parallax (desktop only)
   const mx = useMotionValue(0)
   const my = useMotionValue(0)
   const sx = useSpring(mx, { stiffness: 60, damping: 18 })
@@ -39,7 +33,6 @@ export default function HeroHome() {
     my.set((e.clientY - r.top) / r.height - 0.5)
   }
 
-  // scroll: visual drifts up slower than the copy
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
   const visY = useTransform(scrollYProgress, [0, 1], ['0%', '-14%'])
   const copyY = useTransform(scrollYProgress, [0, 1], ['0%', '10%'])
@@ -63,7 +56,7 @@ export default function HeroHome() {
           </h1>
 
           <motion.p className="hh__lede" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: d + 0.55, duration: 0.9, ease: EASE }}>
-            Public speaking, debate and storytelling for children, students and teams — coached in small batches and finished on a real stage.
+            Public speaking, debate and storytelling for children, students and teams. Coached in small batches, finished on a real stage.
           </motion.p>
 
           <motion.div className="hh__ctas" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: d + 0.65, duration: 0.9, ease: EASE }}>
@@ -190,8 +183,6 @@ function Meter({ start }) {
   )
 }
 
-/* Rotating word on an amber label. All words share one grid cell, so the
-   box keeps the width of the longest word and nothing reflows. */
 function Rotator({ start }) {
   const [i, setI] = useState(0)
   const [prev, setPrev] = useState(-1)

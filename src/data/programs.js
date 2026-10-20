@@ -1,4 +1,3 @@
-// Placeholder program content — replace with client-approved copy.
 export const AUDIENCES = [
   { key: 'schools', label: 'Schools', blurb: 'Grades 3–12 · in-school curriculum, clubs & inter-school leagues' },
   { key: 'colleges', label: 'Colleges', blurb: 'Undergrad & postgrad · placements, MUNs, campus leadership' },
@@ -49,7 +48,7 @@ export const programs = [
       'Competitive British Parliamentary and Asian formats, coached by national-level adjudicators. Rebuttal drills, case-building and live tournaments every month.',
     outcomes: ['Build a case in 15 minutes', 'Rebut without getting personal', 'Read the judge, not just the motion', 'Compete at inter-school leagues'],
     modules: [
-      { t: 'Anatomy of an Argument', d: 'Claim, reasoning, evidence, impact — the four-step spine.' },
+      { t: 'Anatomy of an Argument', d: 'Claim, reasoning, evidence and impact: the four-step spine.' },
       { t: 'Formats & Roles', d: 'BP, Asian and Parliamentary formats explained in practice.' },
       { t: 'Rebuttal Dojo', d: 'Weekly sparring rounds that train speed of thought.' },
       { t: 'Points of Information', d: 'When to stand, what to say, and how to sit down a winner.' },
@@ -91,7 +90,7 @@ export const programs = [
     batch: '12 per batch',
     tone: '#e0731a',
     intro:
-      'Essays, poems, op-eds and speeches. Students learn to write the way great speakers think — with rhythm, clarity and a point of view.',
+      'Essays, poems, op-eds and speeches. Students learn to write the way great speakers think, with rhythm, clarity and a point of view.',
     outcomes: ['Write a persuasive op-ed', 'Edit ruthlessly', 'Find a personal voice', 'Publish in the Miyagi Anthology'],
     modules: [
       { t: 'The Blank Page', d: 'Rituals and prompts that beat writer’s block.' },
@@ -113,7 +112,7 @@ export const programs = [
     batch: '14 per batch',
     tone: '#fbb03b',
     intro:
-      'Drama games, voice work and scene study that unlock expression in even the shyest child — finishing in a full stage production.',
+      'Drama games, voice work and scene study that unlock expression in even the shyest child, finishing in a full stage production.',
     outcomes: ['Perform confidently in an ensemble', 'Express emotion with voice and body', 'Memorise and deliver lines', 'Collaborate creatively'],
     modules: [
       { t: 'Warm-ups & Trust', d: 'Building a safe, playful ensemble.' },
@@ -177,7 +176,7 @@ export const programs = [
     batch: '20 per batch',
     tone: '#e0731a',
     intro:
-      'Model United Nations bootcamp — research, position papers, caucusing and resolution writing, ending with a full simulated conference.',
+      'Model United Nations bootcamp: research, position papers, caucusing and resolution writing, ending with a full simulated conference.',
     outcomes: ['Write a sharp position paper', 'Lobby and build blocs', 'Draft resolutions', 'Win Best Delegate'],
     modules: [
       { t: 'Rules of Procedure', d: 'Motions, points and the flow of committee.' },

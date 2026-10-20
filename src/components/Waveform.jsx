@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useAudio } from '../store/Audio'
 
-/* Bars react to the soundtrack when it plays; otherwise they breathe gently. */
 export default function Waveform({ bars = 64, className = '', idle = 0.32 }) {
   const ref = useRef(null)
   const { analyser, playing } = useAudio()

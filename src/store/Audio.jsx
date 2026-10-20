@@ -1,9 +1,5 @@
 import { createContext, useCallback, useContext, useRef, useState } from 'react'
 
-/*
-  Site soundtrack. Drop the Miyagi track at /public/audio/miyagi-theme.mp3.
-  An AnalyserNode feeds the live waveform in the hero and the nav toggle.
-*/
 const SRC = '/audio/miyagi-theme.mp3'
 const AudioCtx = createContext(null)
 

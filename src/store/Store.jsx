@@ -1,12 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { seedEvents, seedPosts } from '../data/content'
 
-/*
-  Demo data layer. Everything persists to localStorage so the admin panel
-  works end-to-end in the browser. Swap these actions for API calls when
-  the backend is connected — the components only use the hook below.
-*/
-
 const KEY = 'miyagi-store-v1'
 const StoreCtx = createContext(null)
 

@@ -1,10 +1,6 @@
 import { Mascot, Star } from './ui'
 import { fmtDate, fmtPrice } from '../store/Store'
 
-/*
-  Typographic event poster, generated from event data so every event the
-  team publishes in /admin looks designed. An uploaded image overrides it.
-*/
 export default function EventPoster({ event, past = false, className = '' }) {
   const d = new Date(event.date + 'T00:00:00')
   const day = d.getDate()

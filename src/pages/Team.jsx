@@ -13,7 +13,6 @@ export default function Team() {
   const [founder, ...rest] = team
   return (
     <Page title="Team">
-      {/* ---------------- Hero + founder */}
       <section className="tmh t-dark">
         <div className="tmh__glow" aria-hidden />
         <div className="container">
@@ -53,7 +52,6 @@ export default function Team() {
         </div>
       </section>
 
-      {/* ---------------- Coaches */}
       <section className="tg t-paper">
         <div className="container">
           <div className="pp-sec-head">

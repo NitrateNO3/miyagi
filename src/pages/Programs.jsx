@@ -24,7 +24,7 @@ const PATHS = [
 
 const STEPS = [
   ['Free trial class', '30 minutes with a coach to find the right starting belt.'],
-  ['Small batch', 'Never more than 16 learners — everyone speaks every class.'],
+  ['Small batch', 'Never more than 16 learners, so everyone speaks every class.'],
   ['Weekly practice', 'Drills, games and recorded rounds with written feedback.'],
   ['Live showcase', 'Every program ends on a real stage, in front of a real audience.'],
 ]
@@ -35,7 +35,6 @@ export default function Programs() {
   const list = active === 'all' ? programs : programs.filter((p) => p.audiences.includes(active))
   const opts = useRef(null)
 
-  // keep the selected chip visible when the row scrolls sideways (mobile)
   useEffect(() => {
     const row = opts.current
     const on = row?.querySelector('.pf__opt.is-on')
@@ -44,7 +43,6 @@ export default function Programs() {
 
   return (
     <Page title="Programs">
-      {/* ---------------- Hero */}
       <section className="pp-hero t-dark">
         <div className="pp-hero__glow" aria-hidden />
         <div className="container pp-hero__grid">
@@ -57,7 +55,7 @@ export default function Programs() {
               {['Pick your', <span key="a" className="italic amber">discipline.</span>]}
             </SplitText>
             <Reveal delay={1}>
-              <p className="pp-hero__lede">Eight coach-led programs for every age — each one small-batch, practice-first and finished on a real stage.</p>
+              <p className="pp-hero__lede">Eight coach-led programs for every age. Each one is small-batch, practice-first and finished on a real stage.</p>
             </Reveal>
             <Reveal delay={1.1} className="pp-hero__meta">
               <span><strong>6 – 70</strong> ages</span>
@@ -85,7 +83,6 @@ export default function Programs() {
         </div>
       </section>
 
-      {/* ---------------- Filter + grid */}
       <section className="pp t-dark">
         <div className="container">
           <div className="pf">
@@ -160,7 +157,6 @@ export default function Programs() {
         </div>
       </section>
 
-      {/* ---------------- Paths */}
       <section className="pp-paths t-paper">
         <div className="container">
           <div className="pp-sec-head">
@@ -171,7 +167,7 @@ export default function Programs() {
               </div>
               <SplitText className="pp-sec-title">{['Start with', <span key="a" className="italic">their age.</span>]}</SplitText>
             </div>
-            <Reveal as="p" className="pp-sec-aside">Or book a free trial — a coach will recommend the right starting belt.</Reveal>
+            <Reveal as="p" className="pp-sec-aside">Or book a free trial and a coach will recommend the right starting belt.</Reveal>
           </div>
           <div className="pp-paths__grid">
             {PATHS.map((path, k) => (
@@ -199,7 +195,6 @@ export default function Programs() {
         </div>
       </section>
 
-      {/* ---------------- How it works */}
       <section className="pp-how t-dark">
         <div className="container">
           <div className="pp-sec-head">

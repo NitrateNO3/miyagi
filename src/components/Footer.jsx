@@ -65,7 +65,7 @@ export default function Footer({ cta = true }) {
             <div className="yt__copy">
               <span className="yt__eyebrow">Your turn</span>
               <SplitText as="h2" className="yt__title">{['Your turn', <span key="o" className="italic">on stage.</span>]}</SplitText>
-              <p className="yt__lede">Start with a free 30-minute trial class. No scripts, no pressure — just a mic, a coach and your first step.</p>
+              <p className="yt__lede">Start with a free 30-minute trial class. No scripts and no pressure. Just a mic, a coach and your first step.</p>
               <ol className="yt__steps">
                 {['Book a free trial', 'Meet your coach', 'Take the stage'].map((s, k) => (
                   <li key={s}>
@@ -95,7 +95,7 @@ export default function Footer({ cta = true }) {
 
       <div className="container ft__top">
         <Link to="/" className="ft__logo" aria-label="Miyagi home"><Logo /></Link>
-        <p className="ft__promise">Helping children, students and teams find their voice — since 2016.</p>
+        <p className="ft__promise">Helping children, students and teams find their voice since 2016.</p>
         <div className="ft__socials">
           {SOCIALS.map((s) => (
             <a key={s.label} href={s.href} target="_blank" rel="noreferrer" aria-label={s.label} className="ft__social" data-cursor="hide">
@@ -131,7 +131,7 @@ export default function Footer({ cta = true }) {
           <span className="ft__h">The Miyagi Letter</span>
           <p>One practical speaking tip a month. Loved by 9,000+ parents & leaders.</p>
           {done ? (
-            <p className="ft__thanks">You’re in. Wax on. ✦</p>
+            <p className="ft__thanks">You’re in. Wax on!</p>
           ) : (
             <form
               className="ft__form"
@@ -155,7 +155,7 @@ export default function Footer({ cta = true }) {
       </div>
 
       <div className="container ft__base">
-        <span>© {new Date().getFullYear()} Miyagi — The Communication Champ</span>
+        <span>© {new Date().getFullYear()} Miyagi, The Communication Champ</span>
         <div className="ft__base-links">
           <Link to="/admin" className="link-u">Team login</Link>
           <Link to="/contact" className="link-u">Privacy</Link>

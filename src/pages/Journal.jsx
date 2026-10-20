@@ -20,7 +20,6 @@ export default function Journal() {
 
   return (
     <Page title="Journal">
-      {/* ---------------- Hero */}
       <section className="jn-hero t-dark">
         <div className="container">
           <div className="jn-hero__head">
@@ -34,7 +33,7 @@ export default function Journal() {
               </SplitText>
             </div>
             <Reveal delay={1}>
-              <p className="jn-hero__lede">Practical ideas on speaking well — written by our coaches for parents, students and leaders. One new note every fortnight.</p>
+              <p className="jn-hero__lede">Practical ideas on speaking well, written by our coaches for parents, students and leaders. One new note every fortnight.</p>
             </Reveal>
           </div>
           <Reveal delay={1.05} className="pf jn-hero__filter">
@@ -54,7 +53,6 @@ export default function Journal() {
         </div>
       </section>
 
-      {/* ---------------- Stories */}
       <section className="jn t-paper">
         <div className="container">
           <AnimatePresence mode="wait">

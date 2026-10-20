@@ -84,7 +84,7 @@ export default function EventDetail() {
                     <span className="mute">{left} of {e.seats} seats left</span>
                   </div>
                   <Btn variant="amber" onClick={() => setOpen(true)} disabled={left === 0} magnetic={false} className="btn--block">
-                    {left === 0 ? 'Sold out' : `Book your seat — ${fmtPrice(e.price)}`}
+                    {left === 0 ? 'Sold out' : `Book your seat · ${fmtPrice(e.price)}`}
                   </Btn>
                 </>
               )}
@@ -122,7 +122,6 @@ function Countdown({ target }) {
   )
 }
 
-/* ------------------------------------------------------------ Checkout */
 function Checkout({ event, left, onClose }) {
   const { addRegistration } = useStore()
   const [step, setStep] = useState('form') // form | paying | done | error
@@ -154,7 +153,6 @@ function Checkout({ event, left, onClose }) {
     setStep('paying')
     if (total === 0) return setTimeout(() => record('free'), 700)
     if (RZP_KEY && (await loadRazorpay())) {
-      // Production: create an order on the backend and pass order_id here.
       const rzp = new window.Razorpay({
         key: RZP_KEY,
         amount: total * 100,
@@ -169,7 +167,6 @@ function Checkout({ event, left, onClose }) {
       rzp.on('payment.failed', () => setStep('error'))
       rzp.open()
     } else {
-      // Demo mode — no key configured.
       setTimeout(() => record('demo_' + Date.now()), 1600)
     }
   }
@@ -244,7 +241,7 @@ function Checkout({ event, left, onClose }) {
                 <div className="co__line co__line--total"><span>Total</span><span>{fmtPrice(total)}</span></div>
               </div>
 
-              {step === 'error' && <p className="co__err">Payment didn’t go through. No money was taken — please try again.</p>}
+              {step === 'error' && <p className="co__err">Payment didn’t go through. No money was taken, please try again.</p>}
 
               <button className="co__pay" disabled={step === 'paying'} data-cursor="hide">
                 {step === 'paying' ? (

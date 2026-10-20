@@ -6,18 +6,13 @@ import { EASE, Logo, Mascot } from '../components/ui'
 import { fmtDate, fmtPrice, isPast, slugify, useStore } from '../store/Store'
 import { lenis } from '../components/SmoothScroll'
 
-/*
-  Admin panel (demo). Auth + data live in the browser so the Miyagi team can
-  try the full workflow. In production, point the Store actions at the API
-  and replace this password check with server-side sessions.
-*/
 const PASS = import.meta.env.VITE_ADMIN_PASSWORD || 'miyagi2026'
 const SESSION = 'miyagi-admin'
 
 export default function Admin() {
   const [authed, setAuthed] = useState(() => sessionStorage.getItem(SESSION) === '1')
   useEffect(() => {
-    document.title = 'Admin — Miyagi'
+    document.title = 'Admin | Miyagi'
     lenis?.stop()
     return () => lenis?.start()
   }, [])
@@ -35,7 +30,7 @@ function Login({ onOk }) {
     <div className="login">
       <div className="login__art">
         <Mascot animated ink="#000" band="#fff" />
-        <p>“Wax on, wax off.”<br /><span>Publish events, posts and track bookings — no developer needed.</span></p>
+        <p>“Wax on, wax off.”<br /><span>Publish events and posts, and track bookings. No developer needed.</span></p>
       </div>
       <form
         className="login__form"
@@ -123,7 +118,6 @@ function Dashboard({ onLogout }) {
   )
 }
 
-/* ---------------------------------------------------------------- Events */
 const blankEvent = () => ({ id: '', title: '', kicker: '', date: new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10), time: '10:00', venue: '', price: 999, seats: 100, theme: 'amber', poster: '', description: '', agenda: [] })
 
 function EventsAdmin() {
@@ -218,7 +212,6 @@ function EventForm({ initial, onSave }) {
   )
 }
 
-/* ---------------------------------------------------------------- Posts */
 const blankPost = () => ({ id: '', title: '', category: 'Confidence', date: new Date().toISOString().slice(0, 10), read: 4, author: 'Ananya Rao', theme: 'amber', published: false, excerpt: '', body: [] })
 
 function PostsAdmin() {
@@ -306,7 +299,6 @@ function PostForm({ initial, onSave }) {
   )
 }
 
-/* ---------------------------------------------------------------- Registrations */
 function RegsAdmin() {
   const { registrations, events } = useStore()
   const [ev, setEv] = useState('all')
@@ -374,7 +366,6 @@ function LeadsAdmin() {
   )
 }
 
-/* ---------------------------------------------------------------- bits */
 const Field = ({ label, children }) => (
   <label className="adm-field">
     <span>{label}</span>

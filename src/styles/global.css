@@ -1,8 +1,4 @@
-/* ==========================================================================
-   MIYAGI — Design system
-   Brand: amber #fbb03b · black #000 · white #fff
-   Type:  Poppins (display) · Roboto (body)
-   ========================================================================== */
+/* Miyagi */
 
 :root {
   --amber: #fbb03b;
@@ -71,7 +67,7 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-stopped { overflow: hidden; }
 
-/* ---------- Layout ---------- */
+/* Layout */
 .container {
   width: 100%;
   max-width: var(--max);
@@ -88,7 +84,7 @@ html.lenis, html.lenis body { height: auto; }
 .t-white { background: var(--white); color: var(--black); }
 .t-amber { background: var(--amber); color: var(--black); }
 
-/* ---------- Type ---------- */
+/* Type */
 .display, .h1, .h2, .h3, .h4 {
   font-family: var(--f-display);
   font-weight: 600;
@@ -153,7 +149,7 @@ html.lenis, html.lenis body { height: auto; }
 .split-line { display: block; overflow: hidden; padding-bottom: 0.16em; margin-bottom: -0.16em; }
 .split-word { display: inline-block; white-space: pre; will-change: transform; }
 
-/* ---------- Buttons ---------- */
+/* Buttons */
 .btn {
   --bg: var(--white);
   --fg: var(--black);
@@ -258,7 +254,7 @@ html.lenis, html.lenis body { height: auto; }
 .chip--solid { background: var(--black); color: var(--white); border-color: var(--black); }
 .chip--amber { background: var(--amber); color: var(--black); border-color: var(--amber); }
 
-/* ---------- Grain overlay ---------- */
+/* Grain overlay */
 .grain {
   pointer-events: none;
   position: absolute;
@@ -268,7 +264,7 @@ html.lenis, html.lenis body { height: auto; }
   z-index: 1;
 }
 
-/* ---------- Forms ---------- */
+/* Forms */
 .field { display: flex; flex-direction: column; gap: 8px; }
 .field label {
   font-family: var(--f-display);
@@ -303,7 +299,7 @@ html.lenis, html.lenis body { height: auto; }
 .form-grid .full { grid-column: 1 / -1; }
 @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; gap: 26px; } }
 
-/* ---------- Utilities ---------- */
+/* Utilities */
 .rule { height: 1px; background: currentColor; opacity: 0.14; border: 0; margin: 0; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .hide-mobile { }

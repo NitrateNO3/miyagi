@@ -1,8 +1,6 @@
 import { createElement } from 'react'
 import { motion } from 'framer-motion'
 
-/* Line icons for each discipline — 64 grid, stroke = currentColor.
-   draw: false (static) | 'mount' (draws on mount) | 'view' (draws when scrolled into view) */
 const SHAPES = {
   'public-speaking': [
     ['rect', { x: 25, y: 6, width: 14, height: 28, rx: 7 }],

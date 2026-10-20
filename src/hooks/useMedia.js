@@ -12,6 +12,5 @@ export default function useMedia(query) {
   return match
 }
 
-/* First paint sits behind the preloader; later navigations behind the curtain. */
 const BOOT = performance.now()
 export const introDelay = () => (performance.now() - BOOT < 2600 ? 2.45 : 0.7)

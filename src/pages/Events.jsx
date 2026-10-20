@@ -20,7 +20,6 @@ export default function Events() {
 
   return (
     <Page title="Events">
-      {/* ---------------- Hero */}
       <section className="ev-hero t-dark">
         <div className="ev-hero__glow" aria-hidden />
         <div className="container ev-hero__grid">
@@ -72,7 +71,6 @@ export default function Events() {
         </div>
       </section>
 
-      {/* ---------------- Tabs + lists */}
       <section className="ev t-dark">
         <div className="container">
           <div className="pf">

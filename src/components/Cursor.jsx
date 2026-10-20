@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 import { useLocation } from 'react-router-dom'
 
-/* Desktop-only cursor: small amber dot that grows into a labelled disc on [data-cursor] targets. */
 export default function Cursor() {
   const [enabled, setEnabled] = useState(false)
   const [state, setState] = useState({ mode: 'default', label: '' })

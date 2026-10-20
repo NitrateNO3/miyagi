@@ -1,8 +1,6 @@
-/* ==========================================================================
-   Shared components
-   ========================================================================== */
+/* Shared components */
 
-/* ---------- Mascot ---------- */
+/* Mascot */
 .mascot { width: 100%; height: auto; overflow: visible; }
 .mascot__ties { transform-origin: 1250px 500px; }
 .mascot--live .mascot__ties { animation: ties 2.6s var(--ease-in-out) infinite; }
@@ -17,7 +15,7 @@
   50% { transform: translateY(-22px); }
 }
 
-/* ---------- Logo ---------- */
+/* Logo */
 .logo { display: inline-flex; align-items: center; gap: 12px; }
 .logo__tile {
   width: 44px; height: 44px;
@@ -34,7 +32,7 @@
 .logo__word { font-family: var(--f-display); font-weight: 800; font-size: 1.32rem; letter-spacing: -0.02em; }
 .logo__tag { font-family: var(--f-display); font-size: 0.5rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 5px; opacity: 0.75; }
 
-/* ---------- Nav ---------- */
+/* Nav */
 .nav {
   position: fixed;
   inset: 0 0 auto 0;
@@ -197,7 +195,7 @@
   pointer-events: none;
 }
 
-/* ---------- Sound toggle ---------- */
+/* Sound toggle */
 .sound {
   height: 44px;
   padding: 0 18px 0 14px;
@@ -229,7 +227,7 @@
 .sound.is-on .sound__bars i:nth-child(4) { animation-delay: -0.15s; animation-duration: 0.8s; }
 @keyframes eq { from { transform: scaleY(0.2); } to { transform: scaleY(1); } }
 
-/* ---------- Waveform ---------- */
+/* Waveform */
 .wave {
   display: flex;
   align-items: center;
@@ -246,7 +244,7 @@
   will-change: transform;
 }
 
-/* ---------- Cursor ---------- */
+/* Cursor */
 .cursor {
   position: fixed;
   top: 0; left: 0;
@@ -273,7 +271,7 @@
   color: var(--black);
 }
 
-/* ---------- Curtain ---------- */
+/* Curtain */
 .curtain {
   position: fixed;
   inset: 0;
@@ -288,7 +286,7 @@
 .curtain__mark .mascot { width: 64px; }
 .curtain__mark span { font-family: var(--f-display); font-weight: 600; font-size: clamp(1.6rem, 4vw, 3rem); letter-spacing: -0.04em; }
 
-/* ---------- Preloader ---------- */
+/* Preloader */
 .preloader {
   position: fixed;
   inset: 0;
@@ -316,7 +314,7 @@
 .preloader__count { font-family: var(--f-display); font-weight: 700; font-size: clamp(3rem, 10vw, 8rem); line-height: 0.8; letter-spacing: -0.06em; font-variant-numeric: tabular-nums; }
 .preloader__bar { position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--black); transform-origin: left; }
 
-/* ---------- Marquee ---------- */
+/* Marquee */
 .marquee { overflow: hidden; white-space: nowrap; user-select: none; }
 .marquee__track { display: flex; width: max-content; animation: marquee var(--speed) linear infinite; animation-direction: var(--dir); }
 .marquee:hover .marquee__track { animation-play-state: paused; }
@@ -333,7 +331,7 @@
 .star { width: 0.55em; height: 0.55em; flex: none; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
-/* ---------- Section head ---------- */
+/* Section head */
 .section-head {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -348,7 +346,7 @@
   .section-head__aside { justify-self: end; }
 }
 
-/* ---------- Program card ---------- */
+/* Program card */
 .pcard {
   position: relative;
   display: flex;
@@ -429,7 +427,7 @@
 .pcard__go svg { width: 16px; height: 16px; }
 .pcard:hover .pcard__go { background: var(--tone); transform: rotate(45deg); }
 
-/* ---------- Poster ---------- */
+/* Poster */
 .poster {
   --p-bg: var(--amber);
   --p-fg: var(--black);
@@ -500,7 +498,7 @@
 }
 .poster--image .poster__stamp { color: var(--white); background: rgba(0, 0, 0, 0.6); }
 
-/* ---------- Footer ---------- */
+/* Footer */
 .footer { position: relative; overflow: hidden; padding-top: clamp(90px, 12vw, 180px); }
 .footer__cta { padding-bottom: clamp(80px, 10vw, 150px); }
 .footer__cta-title {
@@ -577,7 +575,7 @@
   .footer__cta-btns .btn--ghost { justify-content: center; }
 }
 
-/* ---------- Generic form success ---------- */
+/* Generic form success */
 .success {
   display: flex;
   flex-direction: column;
@@ -593,7 +591,7 @@
 
 .btn--noicon { padding: 0 28px; }
 
-/* ---------- Accordion ---------- */
+/* Accordion */
 .acc { border-top: 1px solid currentColor; border-color: rgba(127, 127, 127, 0.3); }
 .acc__item { border-bottom: 1px solid rgba(127, 127, 127, 0.3); }
 .acc__head {
@@ -624,7 +622,7 @@
 .acc__body p { padding: 0 0 28px 54px; max-width: 46em; font-weight: 300; opacity: 0.78; font-size: 1.05rem; }
 @media (max-width: 640px) { .acc__body p { padding-left: 0; } }
 
-/* ---------- Touch refinements ---------- */
+/* Touch refinements */
 .num { white-space: nowrap; }
 @media (min-width: 561px) { .eyebrow { white-space: nowrap; } }
 @media (hover: none) {
@@ -637,7 +635,7 @@
   .voices__nav button { width: 46px; height: 46px; }
 }
 
-/* ---------- Rotating badge ---------- */
+/* Rotating badge */
 .rotbadge {
   position: absolute;
   right: var(--gutter);

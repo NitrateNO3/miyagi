@@ -4,7 +4,6 @@ import { animate, motion, useInView, useMotionValue, useSpring } from 'framer-mo
 
 export const EASE = [0.22, 1, 0.36, 1]
 
-/* ---------- Brand marks (vector redraw of the Miyagi mascot) ---------- */
 export function Mascot({ className = '', animated = false, band = '#fff', ink = 'currentColor', ...rest }) {
   return (
     <svg className={`mascot ${animated ? 'mascot--live' : ''} ${className}`} viewBox="470 260 1010 1400" aria-hidden="true" {...rest}>
@@ -54,7 +53,6 @@ export const Plus = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M12 5v14M5 12h14" /></svg>
 )
 
-/* ---------- Magnetic wrapper ---------- */
 export function Magnetic({ children, strength = 0.35, className = '' }) {
   const ref = useRef(null)
   const x = useMotionValue(0)
@@ -75,7 +73,6 @@ export function Magnetic({ children, strength = 0.35, className = '' }) {
   )
 }
 
-/* ---------- Button ---------- */
 export function Btn({ to, href, children, variant = '', size = '', icon = true, className = '', magnetic = true, ...rest }) {
   const cls = `btn ${variant ? 'btn--' + variant : ''} ${size ? 'btn--' + size : ''} ${!icon ? 'btn--noicon' : ''} ${className}`
   const inner = (
@@ -96,7 +93,6 @@ export function Btn({ to, href, children, variant = '', size = '', icon = true, 
   return magnetic ? <Magnetic strength={0.2}>{el}</Magnetic> : el
 }
 
-/* ---------- Text reveals ---------- */
 export function SplitText({ children, as: Tag = 'h2', className = '', delay = 0, stagger = 0.06, once = true, immediate = false }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once, margin: '0px 0px -12% 0px' })
@@ -144,7 +140,6 @@ export function Reveal({ children, delay = 0, y = 40, className = '', as = 'div'
   )
 }
 
-/* ---------- Count-up ---------- */
 export function Counter({ value, suffix = '' }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-10%' })
@@ -162,7 +157,6 @@ export function Counter({ value, suffix = '' }) {
   )
 }
 
-/* ---------- Marquee ---------- */
 export function Marquee({ items, className = '', speed = 40, reverse = false }) {
   const row = (
     <div className="marquee__row" aria-hidden>
@@ -200,7 +194,6 @@ export function SectionHead({ index, eyebrow, title, children, className = '' })
   )
 }
 
-/* ---------- Rotating circular badge (inner page heroes) ---------- */
 export function RotBadge({ text, className = '' }) {
   const id = 'rb-' + text.length
   return (

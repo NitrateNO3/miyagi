@@ -50,7 +50,7 @@ export default function Preloader() {
             </div>
           </div>
           <div className="preloader__foot">
-            <span className="label">Miyagi — The Communication Champ</span>
+            <span className="label">Miyagi · The Communication Champ</span>
             <span className="preloader__count">{String(n).padStart(3, '0')}</span>
           </div>
           <div className="preloader__bar" style={{ transform: `scaleX(${n / 100})` }} />

@@ -15,7 +15,7 @@ const TIMELINE = [
 const VALUES = [
   ['Practice over talent', 'Nobody is “a natural”. Every great speaker is simply someone who practised more.'],
   ['Play before polish', 'Games, improv and laughter come first. Fear leaves the room when fun walks in.'],
-  ['Every voice counts', 'The quiet kid, the second-language speaker, the over-thinker — all welcome, all heard.'],
+  ['Every voice counts', 'The quiet kid, the second-language speaker, the over-thinker. All welcome, all heard.'],
   ['The stage is real', 'Every program ends with a real audience. That is where confidence is made.'],
 ]
 
@@ -26,7 +26,6 @@ export default function About() {
 
   return (
     <Page title="About">
-      {/* ---------------- Hero */}
       <section className="ab-hero t-dark">
         <div className="ab-hero__glow" aria-hidden />
         <div className="container ab-hero__grid">
@@ -39,7 +38,7 @@ export default function About() {
               {['We teach the', 'skill school', <span key="f" className="italic amber">forgot.</span>]}
             </SplitText>
             <Reveal delay={1}>
-              <p className="ab-hero__lede">Maths, science, languages — all on the timetable. But the skill that decides interviews, friendships and careers? Speaking up. That’s where we come in.</p>
+              <p className="ab-hero__lede">Maths, science and languages are all on the timetable. But the skill that decides interviews, friendships and careers? Speaking up. That’s where we come in.</p>
             </Reveal>
             <Reveal delay={1.1} className="ab-hero__ctas">
               <Btn to="/programs" variant="amber">Explore programs</Btn>
@@ -71,7 +70,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* ---------------- Stats strip */}
       <section className="ab-stats t-amber">
         <div className="container ab-stats__row">
           {stats.map((s) => (
@@ -83,7 +81,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* ---------------- Name story */}
       <section className="ab-name t-paper">
         <div className="container ab-name__grid">
           <Reveal className="ab-name__tile">
@@ -97,14 +94,13 @@ export default function About() {
             </div>
             <SplitText className="pp-sec-title">{['Named after the', <span key="m" className="italic">patient master.</span>]}</SplitText>
             <Reveal className="ab-name__body">
-              <p>In the film, Mr. Miyagi never lectures. He hands his student a sponge and says “wax on, wax off” — and through hundreds of small, repeated motions, a champion is quietly built.</p>
+              <p>In the film, Mr. Miyagi never lectures. He hands his student a sponge and says “wax on, wax off”, and through hundreds of small, repeated motions, a champion is quietly built.</p>
               <p>That is exactly how communication is learned. Not through theory, but through practice: one sentence, one pause, one brave raised hand at a time.</p>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* ---------------- Timeline */}
       <section className="cu t-dark" style={{ '--tone': '#fbb03b' }}>
         <div className="container cu__grid">
           <div className="cu__side">
@@ -113,7 +109,7 @@ export default function About() {
               <span className="eyebrow">Our story</span>
             </div>
             <SplitText className="cu__title">{['Ten years', <span key="x" className="italic amber">on stage.</span>]}</SplitText>
-            <p className="ab-tl__note">From a borrowed classroom to 140+ partner schools — one brave voice at a time.</p>
+            <p className="ab-tl__note">From a borrowed classroom to 140+ partner schools, one brave voice at a time.</p>
           </div>
           <ol className="cu__list" ref={tl}>
             <span className="cu__rail" aria-hidden><motion.span style={{ scaleY: fill }} /></span>
@@ -131,7 +127,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* ---------------- Values */}
       <section className="ab-val t-paper">
         <div className="container">
           <div className="pp-sec-head">

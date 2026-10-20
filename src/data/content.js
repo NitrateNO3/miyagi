@@ -1,4 +1,3 @@
-// Seed content (placeholder) — events & blog are editable in /admin.
 
 export const seedEvents = [
   {
@@ -14,7 +13,7 @@ export const seedEvents = [
     poster: '',
     description:
       'Our biggest open championship for speakers aged 8–16. Three rounds, live judging by educators and broadcasters, and a grand final on the main stage. Every participant receives a personalised feedback card.',
-    agenda: ['09:30 — Registration & warm-up circle', '10:00 — Round one: prepared speeches', '12:30 — Round two: impromptu', '15:00 — Grand final & awards'],
+    agenda: ['09:30  Registration & warm-up circle', '10:00  Round one: prepared speeches', '12:30  Round two: impromptu', '15:00  Grand final & awards'],
   },
   {
     id: 'debate-dojo-winter-2026',
@@ -29,7 +28,7 @@ export const seedEvents = [
     poster: '',
     description:
       'Teams of three. Six preliminary rounds, break to quarters, and a final motion released 15 minutes before the bell. Adjudicated by national-level judges.',
-    agenda: ['08:30 — Team check-in', '09:00 — Prelims (rounds 1–3)', '13:30 — Prelims (rounds 4–6)', '17:00 — Break announcement & final'],
+    agenda: ['08:30  Team check-in', '09:00  Prelims (rounds 1–3)', '13:30  Prelims (rounds 4–6)', '17:00  Break announcement & final'],
   },
   {
     id: 'storytellers-night-2026',
@@ -43,8 +42,8 @@ export const seedEvents = [
     theme: 'paper',
     poster: '',
     description:
-      'Fairy lights, hot chocolate and twelve young storytellers sharing original tales. Families welcome — the best seat is on a cushion right at the front.',
-    agenda: ['17:30 — Doors & hot chocolate', '18:00 — First set of stories', '19:00 — Interval', '19:20 — Second set & open mic'],
+      'Fairy lights, hot chocolate and twelve young storytellers sharing original tales. Families welcome. The best seat is on a cushion right at the front.',
+    agenda: ['17:30  Doors & hot chocolate', '18:00  First set of stories', '19:00  Interval', '19:20  Second set & open mic'],
   },
   {
     id: 'speak-up-bootcamp-2027',
@@ -59,7 +58,7 @@ export const seedEvents = [
     poster: '',
     description:
       'Five mornings, one transformation. A winter-break intensive covering voice, structure, presence and impromptu speaking, ending in a showcase for parents.',
-    agenda: ['Day 1 — Voice', 'Day 2 — Structure', 'Day 3 — Presence', 'Day 4 — Impromptu', 'Day 5 — Showcase'],
+    agenda: ['Day 1: Voice', 'Day 2: Structure', 'Day 3: Presence', 'Day 4: Impromptu', 'Day 5: Showcase'],
   },
   {
     id: 'summer-showcase-2026',
@@ -116,7 +115,7 @@ export const seedPosts = [
     author: 'Ananya Rao',
     theme: 'amber',
     published: true,
-    excerpt: 'The racing heart before a talk is the same chemistry as excitement. Here’s how we teach kids to rename it — and use it.',
+    excerpt: 'The racing heart before a talk is the same chemistry as excitement. Here’s how we teach kids to rename it, and use it.',
     body: [
       'Every one of our students has felt it. The dry mouth, the drumming heart, the sudden certainty that every word you ever knew has left the building.',
       'Here is the thing we tell them on day one: your body cannot tell the difference between fear and excitement. The chemistry is identical. What changes is the story you tell yourself about it.',
@@ -155,7 +154,7 @@ export const seedPosts = [
     excerpt: 'Arguing both sides of a motion is the fastest empathy training we know. A note for parents worried about raising little lawyers.',
     body: [
       'Parents sometimes ask us whether debating will make their children argumentative. Our answer surprises them: it does the opposite.',
-      'In competitive debate you don’t choose your side. You are handed it, often fifteen minutes before you speak. To win, you must understand a position you may personally disagree with — well enough to defend it.',
+      'In competitive debate you don’t choose your side. You are handed it, often fifteen minutes before you speak. To win, you must understand a position you may personally disagree with, well enough to defend it.',
       'That is empathy, practised under pressure. Children who debate learn that smart, decent people can disagree, and that the strongest arguments are the ones that take the other side seriously.',
     ],
   },
@@ -179,7 +178,7 @@ export const seedPosts = [
 
 export const team = [
   { name: 'Ananya Rao', role: 'Founder & Head Coach', bio: 'Former national debate champion and TEDx speaker coach. Started Miyagi in a borrowed classroom with seven students in 2016.', tone: 'amber' },
-  { name: 'Kabir Mehta', role: 'Director, Debate', bio: 'Adjudicated at 40+ national tournaments. Believes every argument deserves a fair hearing — even bad ones.', tone: 'black' },
+  { name: 'Kabir Mehta', role: 'Director, Debate', bio: 'Adjudicated at 40+ national tournaments. Believes every argument deserves a fair hearing, even the bad ones.', tone: 'black' },
   { name: 'Rohan Kapoor', role: 'Lead, Corporate Training', bio: 'Fifteen years in brand leadership before swapping boardrooms for coaching rooms.', tone: 'paper' },
   { name: 'Meher Sethi', role: 'Theatre & Expression', bio: 'Trained at the National School of Drama. Turns the quietest kid into the loudest laugh in the room.', tone: 'paper' },
   { name: 'Dev Malhotra', role: 'Storytelling Coach', bio: 'Children’s author and radio host. Has never told the same story the same way twice.', tone: 'amber' },
@@ -189,7 +188,7 @@ export const team = [
 ]
 
 export const testimonials = [
-  { quote: 'My daughter used to hide behind me at birthday parties. Last month she hosted her school’s annual day — in front of 900 people.', name: 'Priya S.', role: 'Parent, Grade 6' },
+  { quote: 'My daughter used to hide behind me at birthday parties. Last month she hosted her school’s annual day in front of 900 people.', name: 'Priya S.', role: 'Parent, Grade 6' },
   { quote: 'Miyagi didn’t just teach our students to speak. They taught them to think out loud, and to listen better than they argue.', name: 'Dr. R. Iyer', role: 'Principal, partner school' },
   { quote: 'I went into placement season terrified of group discussions. I came out with three offers and a voice I didn’t know I had.', name: 'Aditya K.', role: 'B.Tech, Class of 2026' },
   { quote: 'The best two days our leadership team has spent together. Practical, playful and genuinely transformative.', name: 'Neha J.', role: 'VP People, fintech' },
@@ -203,7 +202,7 @@ export const stats = [
 ]
 
 export const belts = [
-  { name: 'White', stage: 'Awareness', line: 'Find your voice', d: 'Breath, posture, eye contact. Discover how you sound — and how you could.', color: '#ffffff', ink: '#000' },
+  { name: 'White', stage: 'Awareness', line: 'Find your voice', d: 'Breath, posture, eye contact. Discover how you sound, and how you could.', color: '#ffffff', ink: '#000' },
   { name: 'Yellow', stage: 'Craft', line: 'Shape your ideas', d: 'Hooks, structure, storytelling. Turn thoughts into talks people remember.', color: '#fde3b0', ink: '#000' },
   { name: 'Amber', stage: 'Presence', line: 'Own the stage', d: 'Movement, pause, pace. Command a room without raising your voice.', color: '#fbb03b', ink: '#000' },
   { name: 'Orange', stage: 'Persuasion', line: 'Move people', d: 'Debate, rebuttal, impromptu. Think on your feet and win minds fairly.', color: '#e0731a', ink: '#000' },

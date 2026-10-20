@@ -5,10 +5,9 @@ import { Mascot } from './ui'
 
 const CURTAIN = [0.76, 0, 0.24, 1]
 
-/* Every route renders inside <Page>: amber curtain transition + footer. */
 export default function Page({ title, children, footer = true, cta = true, className = '' }) {
   useEffect(() => {
-    document.title = title ? `${title} — Miyagi` : 'Miyagi — The Communication Champ'
+    document.title = title ? `${title} | Miyagi` : 'Miyagi | The Communication Champ'
   }, [title])
 
   return (

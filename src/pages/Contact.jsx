@@ -7,7 +7,7 @@ import { useStore } from '../store/Store'
 
 const FAQ = [
   { t: 'What age can my child start?', d: 'Storytelling and theatre start at 6. Public speaking from 8, debating from 11. Adults are welcome in our individual and corporate tracks.' },
-  { t: 'Is the trial class really free?', d: 'Yes. A 30-minute trial with a coach — no payment details, no obligation.' },
+  { t: 'Is the trial class really free?', d: 'Yes. A 30-minute trial with a coach. No payment details, no obligation.' },
   { t: 'Do you run programs inside schools?', d: 'We partner with 140+ schools to deliver weekly in-timetable sessions, clubs and inter-school leagues. Write to us for a school proposal.' },
   { t: 'Online or in person?', d: 'Both. Studio batches run in Delhi NCR; online cohorts are live, small and camera-on.' },
   { t: 'How do event bookings work?', d: 'Choose an event, select seats and pay securely via Razorpay (UPI, cards, netbanking). Your e-ticket arrives by email instantly.' },
@@ -28,7 +28,7 @@ export default function Contact() {
         <div className="container contact__grid">
           <div className="contact__side">
             <div className="page-hero__index">
-              <span className="num">(✦)</span>
+              <span className="num">(C)</span>
               <span className="eyebrow">Contact</span>
             </div>
             <SplitText as="h1" className="display contact__title" immediate delay={0.75}>
