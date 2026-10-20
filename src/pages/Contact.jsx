@@ -2,8 +2,9 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Page from '../components/Page'
 import Accordion from '../components/Accordion'
-import { Btn, EASE, Mascot, Reveal, SplitText } from '../components/ui'
+import { Arrow, Btn, EASE, Mascot, Reveal, SplitText } from '../components/ui'
 import { useStore } from '../store/Store'
+import { lenis } from '../components/SmoothScroll'
 
 const FAQ = [
   { t: 'What age can my child start?', d: 'Storytelling and theatre start at 6. Public speaking from 8, debating from 11. Adults are welcome in our individual and corporate tracks.' },
@@ -37,13 +38,15 @@ export default function Contact() {
             <Reveal delay={1} className="contact__details">
               <a href="mailto:hello@miyagi.in" className="contact__big link-u">hello@miyagi.in</a>
               <a href="tel:+919800000000" className="contact__big link-u">+91 98000 00000</a>
-              <div className="contact__addr">
-                <span className="label mute">Studio</span>
-                <span>Miyagi Studio, Sector 29<br />Gurugram, Haryana 122002</span>
-              </div>
-              <div className="contact__addr">
-                <span className="label mute">Hours</span>
-                <span>Tue – Sun · 10am – 7pm</span>
+              <div className="contact__addrs">
+                <div className="contact__addr">
+                  <span className="label mute">Studio</span>
+                  <span>Miyagi Studio, Sector 29<br />Gurugram, Haryana 122002</span>
+                </div>
+                <div className="contact__addr">
+                  <span className="label mute">Hours</span>
+                  <span>Tue – Sun · 10am – 7pm</span>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -84,9 +87,25 @@ export default function Contact() {
             </AnimatePresence>
           </Reveal>
         </div>
+        <motion.button
+          className="to-faq"
+          onClick={() => {
+            const el = document.getElementById('faq')
+            if (!el) return
+            if (lenis && window.matchMedia('(pointer: fine)').matches) lenis.scrollTo(el, { duration: 1.4 })
+            else window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' })
+          }}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.6, duration: 0.8, ease: EASE }}
+          data-cursor="hide"
+        >
+          <span>Got questions? <strong>See the FAQ</strong></span>
+          <span className="to-faq__arrow"><Arrow dir="d" /></span>
+        </motion.button>
       </section>
 
-      <section className="faq t-paper section">
+      <section className="faq t-paper section" id="faq">
         <div className="container faq__grid">
           <div>
             <div className="section-head__meta">
@@ -94,6 +113,7 @@ export default function Contact() {
               <span className="eyebrow">FAQ</span>
             </div>
             <SplitText className="h2">{['Good', <span key="q" className="italic">questions.</span>]}</SplitText>
+            <p className="faq__note">Can’t find your answer? Message us above or WhatsApp +91 98000 00000.</p>
           </div>
           <Accordion items={FAQ} />
         </div>
