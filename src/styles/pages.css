@@ -2875,3 +2875,43 @@
   .to-faq { position: sticky; bottom: 16px; margin: 24px auto 0; background: rgba(20, 20, 20, 0.85); box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.8); }
 }
 @media (max-width: 900px) { .contact { overflow: clip; } }
+
+/* Event detail: fit one screen */
+@media (min-width: 901px) {
+  .ed { min-height: 100svh; display: flex; align-items: center; padding-top: calc(var(--nav-h) + clamp(10px, 2.4vh, 30px)); padding-bottom: clamp(18px, 3.6vh, 40px); }
+  .ed > .container { width: 100%; }
+  .ed__grid { grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr); align-items: center; gap: clamp(30px, 5vw, 80px); }
+  .ed__poster-col { position: static; display: flex; justify-content: center; }
+  .ed__poster { width: min(100%, calc((100svh - var(--nav-h) - 90px) * 0.8)); }
+  .ed__info { gap: clamp(8px, 1.7vh, 18px); }
+  .ed__kicker { margin-top: 4px; }
+  .ed__info .h1 { font-size: clamp(2rem, min(4.2vw, 7.4vh), 4.4rem); }
+  .ed .countdown { padding: clamp(8px, 1.4vh, 14px) 0; gap: clamp(16px, 2.4vw, 32px); }
+  .ed .countdown__v { font-size: clamp(1.5rem, min(2.6vw, 4.6vh), 2.6rem); }
+  .ed__facts { grid-template-columns: 1.3fr 0.6fr 1.3fr 0.9fr; gap: 12px 20px; }
+  .ed__fact { font-size: 0.92rem; }
+  .ed__desc { font-size: 0.98rem; line-height: 1.5; }
+  .ed__agenda ul { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; margin-top: 6px; }
+  .ed__agenda li { padding: clamp(5px, 1vh, 10px) 0; font-size: 0.9rem; }
+  .ed__book { flex-direction: row; align-items: center; gap: 20px; padding: clamp(12px, 2vh, 18px) clamp(14px, 2vw, 22px); }
+  .ed__seats { flex: 1; }
+  .ed__book .magnetic, .ed__book .btn { width: auto; flex: none; }
+  .ed__book .btn--block { justify-content: space-between; gap: 18px; }
+  .ed__ended { flex-direction: row; align-items: center; flex-wrap: wrap; }
+}
+@media (min-width: 901px) {
+  .ed__ended { flex-wrap: nowrap; gap: 14px; }
+  .ed__ended p { flex: 1; }
+}
+@media (max-width: 900px) {
+  .ed { padding-top: calc(var(--nav-h) + 16px); }
+  .ed__grid { gap: 18px; }
+  .ed__poster-col { max-width: none; }
+  .ed__poster { width: 52%; max-width: 230px; }
+  .ed__info { gap: 14px; }
+  .ed__info .h1 { font-size: clamp(2rem, 10vw, 3rem); }
+  .ed .countdown { padding: 10px 0; }
+  .ed .countdown__v { font-size: 1.8rem; }
+  .ed__facts { gap: 12px 18px; }
+  .ed__fact { font-size: 0.92rem; }
+}
