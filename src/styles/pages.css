@@ -2915,3 +2915,27 @@
   .ed__facts { gap: 12px 18px; }
   .ed__fact { font-size: 0.92rem; }
 }
+
+/* Checkout panel: fit one screen */
+.co__panel:not(.adm-drawer) { display: flex; flex-direction: column; padding-bottom: clamp(14px, 2.4vh, 28px); }
+.co__panel:not(.adm-drawer) .co__head { padding: clamp(10px, 1.8vh, 18px) 0; margin-bottom: clamp(10px, 2vh, 20px); }
+.co__panel:not(.adm-drawer) .co__close { width: 38px; height: 38px; }
+.co__form { gap: clamp(10px, 2vh, 20px); }
+.co__thumb { width: 60px; }
+.co__event { gap: 14px; }
+.co__event h3 { font-size: 1.2rem; margin-bottom: 2px; }
+.co__qty { padding: clamp(6px, 1vh, 10px) 0; }
+.stepper button { width: 34px; height: 34px; }
+.co__fields { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(12px, 2.2vh, 22px) 20px; }
+.co__fields .field { gap: 4px; }
+.co__fields .field input { padding: 8px 0 10px; font-size: 1rem; }
+.co__total { padding: clamp(10px, 1.6vh, 16px) 18px; gap: 6px; }
+.co__line--total { padding-top: 6px; font-size: 1.25rem; }
+.co__pay { height: clamp(50px, 7vh, 60px); }
+.co__secure { margin-top: -6px; }
+.co__done { gap: 16px; }
+.co__ticket { padding: 22px; gap: 8px; }
+.co__ticket h3 { font-size: 1.8rem; }
+@media (max-width: 480px) {
+  .co__fields { grid-template-columns: 1fr; gap: 12px; }
+}
