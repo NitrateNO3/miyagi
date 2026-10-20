@@ -1955,7 +1955,6 @@
 }
 .yt__copy { display: flex; flex-direction: column; gap: clamp(14px, 2vw, 22px); align-items: flex-start; }
 .yt__eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--f-display); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; }
-.yt__eyebrow::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--black); }
 .yt__title { font-family: var(--f-display); font-weight: 700; font-size: clamp(2.8rem, 6.6vw, 6.6rem); line-height: 0.9; letter-spacing: -0.055em; }
 .yt__title .italic { font-weight: 300; }
 .yt__lede { max-width: 30em; font-size: 1.05rem; line-height: 1.55; color: rgba(0, 0, 0, 0.72); }

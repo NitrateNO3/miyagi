@@ -129,13 +129,6 @@ html.lenis, html.lenis body { height: auto; }
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
-.eyebrow::before {
-  content: '';
-  width: 9px; height: 9px;
-  border-radius: 50%;
-  background: var(--amber);
-  box-shadow: 0 0 0 4px rgba(251, 176, 59, 0.18);
-}
 
 .num {
   font-family: var(--f-display);
