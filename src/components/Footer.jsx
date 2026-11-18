@@ -118,7 +118,7 @@ export default function Footer({ cta = true }) {
           <Link className="link-u" to="/about">About us</Link>
           <Link className="link-u" to="/team">Our coaches</Link>
           <Link className="link-u" to="/events">Events</Link>
-          <Link className="link-u" to="/journal">Journal</Link>
+          <Link className="link-u" to="/journal">Blog</Link>
         </div>
         <div className="ft__col">
           <span className="ft__h">Visit us</span>

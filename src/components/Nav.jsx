@@ -12,7 +12,7 @@ const LINKS = [
   { to: '/corporate', label: 'Corporate' },
   { to: '/about', label: 'About' },
   { to: '/team', label: 'Team' },
-  { to: '/journal', label: 'Journal' },
+  { to: '/journal', label: 'Blog' },
 ]
 
 export default function Nav() {

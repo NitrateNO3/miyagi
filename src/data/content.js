@@ -177,14 +177,76 @@ export const seedPosts = [
 ]
 
 export const team = [
-  { name: 'Ananya Rao', role: 'Founder & Head Coach', bio: 'Former national debate champion and TEDx speaker coach. Started Miyagi in a borrowed classroom with seven students in 2016.', tone: 'amber' },
-  { name: 'Kabir Mehta', role: 'Director, Debate', bio: 'Adjudicated at 40+ national tournaments. Believes every argument deserves a fair hearing, even the bad ones.', tone: 'black' },
-  { name: 'Rohan Kapoor', role: 'Lead, Corporate Training', bio: 'Fifteen years in brand leadership before swapping boardrooms for coaching rooms.', tone: 'paper' },
-  { name: 'Meher Sethi', role: 'Theatre & Expression', bio: 'Trained at the National School of Drama. Turns the quietest kid into the loudest laugh in the room.', tone: 'paper' },
-  { name: 'Dev Malhotra', role: 'Storytelling Coach', bio: 'Children’s author and radio host. Has never told the same story the same way twice.', tone: 'amber' },
-  { name: 'Ira Banerjee', role: 'Programs & Partnerships', bio: 'Builds the bridge between Miyagi and 140+ partner schools across the country.', tone: 'black' },
-  { name: 'Arjun Nair', role: 'Interview & Careers', bio: 'Ex-recruiter who has sat on the other side of 3,000 interviews.', tone: 'black' },
-  { name: 'Sara Qureshi', role: 'MUN Director', bio: 'Secretary-General of six conferences. Diplomacy, but make it fun.', tone: 'amber' },
+  {
+    name: 'Vinay Pushpakaran',
+    role: 'Founder & Lead Sensei',
+    bio: '',
+    img: '/assets/team/vinay.jpg',
+    tone: 'amber',
+  },
+  {
+    name: 'Akshata Subbaraya',
+    role: 'Chief Operating Officer',
+    bio: 'Every team needs someone who can keep a cool head when plans take an unexpected turn. At Miyagi, that someone is Akshata! She heads our strategy, operations and marketing. But give her a room full of learners, young or grown-up, and you’ll see her public speaking mentor side shine. After 15+ years in advertising, understanding people is familiar territory for her, and she now puts that instinct to work in sessions on public speaking, leadership and entrepreneurship. She lives in the Western Ghats and loves learning new things — be it a new dance form, knitting or whipping up a delectable vegan cake!',
+    img: '/assets/team/akshata.jpg',
+    tone: 'black',
+  },
+  {
+    name: 'Nivash Gopalasamy',
+    role: 'Theatre · Communication · Team Building',
+    bio: 'A theatre artist, HR professional, voiceover artist, corporate trainer and educator — Nivash has quite a few hats, and we’ve stopped trying to count them! One of Miyagi’s OG team members, he’s someone we turn to for our toughest assignments. He brings 16 years of facilitation experience and a Grade 8 certification in Speech and Drama from Trinity College London. His sessions use theatre and lively activities to explore communication, teamwork and problem solving with students, educators and workplace teams. Expect movement, laughter and plenty of involvement when Nivash is around.',
+    img: '/assets/team/nivash.jpg',
+    tone: 'paper',
+  },
+  {
+    name: 'Vijayshree Mahesh',
+    role: 'Public Speaking · Communication · Debate',
+    bio: 'Vijayshree, or VJ as we fondly call her, brings the kind of energy her participants remember long after a session ends. A former IT professional and longtime Toastmaster, she brings more than 13 years of mentoring people on workplace communication, alongside four years of dedicated training. Her experience in technology, business development and sales gives her plenty of real examples to draw on. VJ prepares carefully for each audience and makes room for participants to add their own ideas. Outside sessions, she loves music and party planning — getting people involved seems to follow her everywhere!',
+    img: '/assets/team/vijayshree.jpg',
+    tone: 'amber',
+  },
+  {
+    name: 'Krithika Balakumar',
+    role: 'Public Speaking · Entrepreneurship · Team Building',
+    bio: 'If a task needs a plan and someone to see it through, there are few who can beat Krithika at it. She brings a welcome sense of order to the Miyagi squad, along with a rare ability to bond with the youngest of our students as well as the older ones. A former business analyst with 15+ years at Accenture, she brings that experience into her work on public speaking, entrepreneurship and team building. Her sessions are full of activities adapted to the group, with time to connect, have fun and learn something useful. When she’s away from the classroom, you might catch her whistling a favourite song!',
+    img: '/assets/team/krithika.jpg',
+    tone: 'black',
+  },
+  {
+    name: 'Sukanya Umesh',
+    role: 'Storytelling · Theatre · Facilitation',
+    bio: 'If there’s a story hiding inside a lesson, Suki is probably already working out how to tell it! A storyteller, writer, director and actor, Sukanya brings 14 years of facilitation experience to her work with children and adults. With training in Bharatanatyam and Carnatic music, she has quite a few ways to bring learning to life. Her toolkit includes physical games, expressive voices, movement and plenty of laughter, and along the way participants explore how stories work and how to tell them with impact. She’s also worked in narrative game design, so creating playful ways to learn is familiar territory for her.',
+    img: '/assets/team/sukanya.jpg',
+    tone: 'paper',
+  },
+  {
+    name: 'Aeli Mammen',
+    role: 'Public Speaking · Communication · Theatre',
+    bio: 'Watch Aeli teach and you’ll understand why her students remember her expressive face! With a background in theatre and six years of facilitation experience, she brings a generous helping of play into the classroom. She holds undergraduate and postgraduate degrees in English Literature and has taught acting through games and activities. At Miyagi, her communication and public speaking sessions give students room to discuss, imagine and perform ideas of their own, with plenty of opportunities for hesitant speakers to join in. Away from class, she’s an expert tarot reader. There’s always another story to discover with Aeli.',
+    img: '/assets/team/aeli.jpg',
+    tone: 'amber',
+  },
+  {
+    name: 'Srinithi Natarajan',
+    role: 'Debate · Public Speaking · Entrepreneurship',
+    bio: 'Srinithi’s Miyagi story began in Class 11, as a curious debate student — moving on to an enthusiastic internship with us, and now being an integral part of the team. Today she helps other students find their voice. A gold-medal winning psychologist, debate coach, theatre artist, author, public speaking trainer and storyteller, Srinithi brings energy and enthusiasm to her sessions. Her work also includes helping children build awareness of mental health, a subject she cares deeply about. She knows Miyagi from both sides of the classroom — and if the conversation turns to the best red-sauce pasta or lemon tea, she’s the person we turn to for a recommendation!',
+    img: '',
+    tone: 'black',
+  },
+  {
+    name: 'R Umasankari',
+    role: 'Social Emotional Learning · Teacher Development · Emotional Intelligence',
+    bio: 'For Uma, a good session begins with people feeling they can be themselves. A psychologist and wellbeing facilitator with a master’s degree in psychology and a decade of facilitation experience, she works with students, educators and teams on emotional intelligence, communication and social-emotional learning. Her sessions make room for activities, honest conversations and reflection, followed by practical steps participants can take into everyday life. She also follows up after workshops to help people put their learning into practice. Away from facilitation, she loves spontaneous conversations, cooking healthy, tasty food and making gatherings a little more fun.',
+    img: '/assets/team/uma.jpg',
+    tone: 'paper',
+  },
+  {
+    name: 'Aadithiya Rajan',
+    role: 'Theatre · Communication · Entrepreneurship',
+    bio: 'Aadithiya runs a theatre production company and a live performance venue — getting people involved is fairly central to his day! An actor, playwright and businessman, he runs Showboats and Arena The Art Experience, bringing that experience into sessions on theatre, communication and entrepreneurship. Across six years of facilitation, his approach has stayed refreshingly straightforward: listen properly, keep things simple and do the work. Expect icebreakers, activities and students working things out together. Outside the classroom, he writes for films and plays cricket — clearly, there’s more than one kind of pitch in Aadithiya’s world!',
+    img: '/assets/team/aadithiya.jpg',
+    tone: 'amber',
+  },
 ]
 
 export const testimonials = [

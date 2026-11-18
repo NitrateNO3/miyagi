@@ -3,11 +3,6 @@ import { Btn, Mascot, Reveal, SplitText } from '../components/ui'
 import { team } from '../data/content'
 
 const initials = (n) => n.split(' ').map((s) => s[0]).join('')
-const FOUNDER_FACTS = [
-  ['10', 'years coaching'],
-  ['40+', 'tournaments judged'],
-  ['12k', 'students coached'],
-]
 
 export default function Team() {
   const [founder, ...rest] = team
@@ -27,26 +22,28 @@ export default function Team() {
               </SplitText>
             </div>
             <Reveal delay={1}>
-              <p className="tmh__lede">Debate champions, actors, authors, recruiters and teachers. Each one was once a nervous beginner too.</p>
+              <p className="tmh__lede">Our mentors and facilitators bring experience, imagination and a personal touch to every session, helping students find their voice and grow in confidence.</p>
             </Reveal>
           </div>
 
           <Reveal delay={1.05} className="fd">
             <div className="fd__portrait">
-              <span className="fd__init">{initials(founder.name)}</span>
+              {founder.img ? (
+                <img className="fd__photo" src={founder.img} alt={founder.name} loading="eager" />
+              ) : (
+                <span className="fd__init">{initials(founder.name)}</span>
+              )}
               <span className="fd__mascot"><Mascot animated ink="#000" band="#fff" /></span>
               <span className="fd__badge">Founder</span>
             </div>
             <div className="fd__body">
               <span className="label amber">{founder.role}</span>
               <h2 className="fd__name">{founder.name}</h2>
-              <p className="fd__quote">“I was the kid who rehearsed one question for a whole lesson and never asked it. Miyagi is for that kid.”</p>
-              <p className="fd__bio">{founder.bio}</p>
-              <div className="fd__facts">
-                {FOUNDER_FACTS.map(([v, l]) => (
-                  <div key={l}><strong>{v}</strong><span>{l}</span></div>
-                ))}
-              </div>
+              {founder.bio ? (
+                <p className="fd__bio">{founder.bio}</p>
+              ) : (
+                <p className="fd__bio">The founder and lead sensei behind Miyagi, guiding the team and the mission of helping students find their voice.</p>
+              )}
             </div>
           </Reveal>
         </div>
@@ -69,8 +66,14 @@ export default function Team() {
               <Reveal key={p.name} delay={(i % 4) * 0.07}>
                 <article className={`tc tc--${p.tone}`}>
                   <div className="tc__art">
-                    <span className="tc__init">{initials(p.name)}</span>
-                    <span className="tc__mascot"><Mascot ink={p.tone === 'black' ? '#fbb03b' : '#000'} band={p.tone === 'amber' ? '#fff' : '#fbb03b'} /></span>
+                    {p.img ? (
+                      <img className="tc__photo" src={p.img} alt={p.name} loading="lazy" />
+                    ) : (
+                      <>
+                        <span className="tc__init">{initials(p.name)}</span>
+                        <span className="tc__mascot"><Mascot ink={p.tone === 'black' ? '#fbb03b' : '#000'} band={p.tone === 'amber' ? '#fff' : '#fbb03b'} /></span>
+                      </>
+                    )}
                     <p className="tc__bio">{p.bio}</p>
                   </div>
                   <div className="tc__info">
@@ -83,8 +86,8 @@ export default function Team() {
             <Reveal delay={0.2}>
               <div className="tc tc--join">
                 <span className="tc__join-plus">+</span>
-                <h3>Could this be you?</h3>
-                <p>We’re always looking for great coaches who love the stage.</p>
+                <h3>Could you be our next Sensei?</h3>
+                <p>If you love making learning fun and helping students find their voice, we’d love to meet you.</p>
                 <Btn to="/contact" variant="black" magnetic={false}>Join the team</Btn>
               </div>
             </Reveal>

@@ -2633,6 +2633,7 @@
 .fd { position: relative; display: grid; grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr); gap: clamp(24px, 4vw, 60px); padding: clamp(14px, 1.6vw, 20px); border-radius: 36px; background: var(--ink-2); border: 1px solid var(--line-dark); }
 .fd__portrait { position: relative; min-height: 380px; border-radius: 26px; background: var(--amber); color: var(--black); display: grid; place-items: center; overflow: hidden; }
 .fd__portrait::before { content: ''; position: absolute; right: -25%; top: -25%; width: 90%; aspect-ratio: 1; border-radius: 50%; border: 2px solid rgba(0, 0, 0, 0.1); box-shadow: 0 0 0 40px rgba(0, 0, 0, 0.03), 0 0 0 80px rgba(0, 0, 0, 0.02); }
+.fd__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
 .fd__init { font-family: var(--f-display); font-weight: 800; font-size: clamp(7rem, 14vw, 12rem); letter-spacing: -0.08em; line-height: 1; }
 .fd__mascot { position: absolute; right: 8%; bottom: 8%; width: 70px; height: 70px; border-radius: 20px; background: var(--white); padding: 12px 14px 10px; transform: rotate(6deg); }
 .fd__badge { position: absolute; left: 18px; top: 18px; padding: 7px 14px; border-radius: 99px; background: var(--black); color: var(--amber); font-family: var(--f-display); font-weight: 600; font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; }
@@ -2649,12 +2650,15 @@
 .tg__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .tc { height: 100%; display: flex; flex-direction: column; border-radius: 26px; overflow: hidden; background: var(--white); border: 1px solid var(--line-light); }
 .tc__art { position: relative; aspect-ratio: 4 / 4.2; display: grid; place-items: center; overflow: hidden; }
+.tc__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
 .tc--amber .tc__art { background: var(--amber); color: var(--black); }
 .tc--black .tc__art { background: var(--ink-3); color: var(--amber); }
 .tc--paper .tc__art { background: var(--paper-2); color: var(--black); }
 .tc__init { font-family: var(--f-display); font-weight: 800; font-size: clamp(4rem, 7vw, 6.4rem); letter-spacing: -0.08em; line-height: 1; transition: transform 0.6s var(--ease), opacity 0.4s; }
 .tc__mascot { position: absolute; right: 10%; bottom: 9%; width: 20%; transition: transform 0.6s var(--ease), opacity 0.4s; }
-.tc__bio { position: absolute; inset: 0; padding: 22px; display: flex; align-items: flex-end; background: linear-gradient(to top, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.55)); color: var(--white); font-size: 0.95rem; line-height: 1.5; font-weight: 300; opacity: 0; transform: translateY(12px); transition: opacity 0.4s var(--ease), transform 0.5s var(--ease); }
+.tc__bio { position: absolute; inset: 0; padding: 18px; display: block; overflow-y: auto; background: linear-gradient(to top, rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.5)); color: var(--white); font-size: 0.82rem; line-height: 1.5; font-weight: 300; opacity: 0; transform: translateY(12px); transition: opacity 0.4s var(--ease), transform 0.5s var(--ease); -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, 0.4) transparent; }
+.tc__bio::-webkit-scrollbar { width: 5px; }
+.tc__bio::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.35); border-radius: 6px; }
 .tc:hover .tc__bio { opacity: 1; transform: none; }
 .tc:hover .tc__init { transform: scale(0.85) translateY(-14%); }
 .tc__info { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 4px; }
